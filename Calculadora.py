@@ -48,5 +48,67 @@ while True:
       
    except ValueError:   
       print ("\n você inseriu letras ou caracteres inválidos!")
- input("\n pressione ENTER para voltar ao menu...")
+   input("\n pressione ENTER para voltar ao menu...")
  
+#===================================================
+# OPÇÃO 2: FLUXO DE CAIXA (CÁLCULO DE TROCO)
+#=================================================== 
+ elif opcao == "2":
+  print("\n--- MENU: FLUXO DE CAIXA (TROCO) ---")
+  try:
+       valor_total = float(input("Digite o valor total da compra: R$ "))
+       valor_pago = float(input("Digite o valor pago pelo cliente: R$ "))
+
+       if valor_pago < valor_total:
+          print("\n Erro no Caixa: O valor pago é menor que o total da compra!")
+       else:
+          # Transforma o troco em centavos inteiros para evitar erros de arredondamento do Python
+         troco = round((valor_pago - valor_total) * 100)
+         print(f"\nTroco total: R$ {troco / 100:.2f}")
+         print("-----------------------------------------")
+         print("Cédulas e Moedas a serem entregues:")
+
+                # Execução do Algoritmo Guloso (testando da maior nota até a menor moeda)
+       if troco >= 20000:
+          print(f"- {troco // 20000} nota(s) de R$ 200,00")
+          troco %= 20000
+       if troco >= 10000:
+          print(f"- {troco // 10000} nota(s) de R$ 100,00")
+          troco %= 10000
+       if troco >= 5000:
+          print(f"- {troco // 5000} nota(s) de R$ 50,00")
+          troco %= 5000
+       if troco >= 2000:
+          print(f"- {troco // 2000} nota(s) de R$ 20,00")
+          troco %= 2000
+       if troco >= 1000:
+          print(f"- {troco // 1000} nota(s) de R$ 10,00")
+          troco %= 1000
+       if troco >= 500:
+         print(f"- {troco // 500} nota(s) de R$ 5,00")
+         troco %= 500
+       if troco >= 200:
+          print(f"- {troco // 200} nota(s) de R$ 2,00")
+          troco %= 200
+       if troco >= 100:
+          print(f"- {troco // 100} moeda(s) de R$ 1,00")
+          troco %= 100
+       if troco >= 50:
+          print(f"- {troco // 50} moeda(s) de R$ 0,50")
+          troco %= 50
+       if troco >= 25:
+          print(f"- {troco // 25} moeda(s) de R$ 0,25")
+          troco %= 25
+       if troco >= 10:
+          print(f"- {troco // 10} moeda(s) de R$ 0,10")
+          troco %= 10
+       if troco >= 5:
+          print(f"- {troco // 5} moeda(s) de R$ 0,05")
+          troco %= 5
+       if troco >= 1:
+          print(f"- {troco} moeda(s) de R$ 0,01")
+
+  except ValueError:
+    print("\n Erro de Digitação: Insira valores numéricos válidos (ex: 50.50)!")
+
+input("\nPressione ENTER para voltar ao menu...") 
