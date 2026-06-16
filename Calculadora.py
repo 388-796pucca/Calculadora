@@ -116,8 +116,10 @@ input("\nPressione ENTER para voltar ao menu...")
 #=================================================
 # OPÇÃO 3: MULTIPLICAÇÃO DE MATRIZ 2X2
 #=================================================
- elif opcao == "3"
+if opcao == "3":
+   print("\n---MENU: MULTIPLICAÇÃO DE MATRIZES 2X2---")
    try:
+      
       print("\nInsira os dados da Matriz A:")
       a11 = float(input("Posição [1][1]: "))
       a12 = float(input("Posição [1][2]: "))
@@ -130,15 +132,15 @@ input("\nPressione ENTER para voltar ao menu...")
       b21 = float(input("Posição [2][1]: "))
       b22 = float(input("Posição [2][2]: "))
 
-            res11 = (a11 * b11) + (a12 * b21)  # Linha 1 de A x Coluna 1 de B
-            res12 = (a11 * b12) + (a12 * b22)  # Linha 1 de A x Coluna 2 de B
-            res21 = (a21 * b11) + (a22 * b21)  # Linha 2 de A x Coluna 1 de B
-            res22 = (a21 * b12) + (a22 * b22)  # Linha 2 de A x Coluna 2 de B
+      res11 = (a11 * b11) + (a12 * b21)  # Linha 1 de A x Coluna 1 de B
+      res12 = (a11 * b12) + (a12 * b22)  # Linha 1 de A x Coluna 2 de B
+      res21 = (a21 * b11) + (a22 * b21)  # Linha 2 de A x Coluna 1 de B
+      res22 = (a21 * b12) + (a22 * b22)  # Linha 2 de A x Coluna 2 de B
 
-            print("\nResultado Final da Matriz (A x B):")
-            print(f"[ {res11}   {res12} ]")
-            print(f"[ {res21}   {res22} ]")
+      print("\nResultado Final da Matriz (A x B):")
+      print(f"[ {res11}   {res12} ]")
+      print(f"[ {res21}   {res22} ]")
 
    except ValueError:
-       print("\nErro de Digitação: Use apenas números!")
+      print("Erro de Digitação: Use apenas números inteiros ou decimais!")
    input("\nPressione ENTER para voltar ao menu...")
