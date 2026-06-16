@@ -37,7 +37,7 @@ A equação executada pelo código para cada elemento resultante é:
 
 ---
 
-## 📖 Estrutura de Código Explicada
+##  Estrutura de Código Explicada
 
 O código funciona sob um laço de repetição infinito `while True`, o que garante que o menu reapareça toda vez que uma operação for finalizada. O encerramento controlado só ocorre ao digitar a opção `0`.
 ---
